@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 10px;
+}
+body {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80rem;
+  height: 100vh;
+  margin: 0 auto;
+}
+.game_container {
+  width: 60rem;
+}
+.score_part {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10rem;
+}
+.scores {
+  width: 5rem;
+  height: 3rem;
+  background-color: rgb(255, 251, 0);
+  border: none;
+  outline: none;
+}
+.time_question {
+  width: 4.5rem;
+  height: 4.5rem;
+  background-color: antiquewhite;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  margin-bottom: 2rem;
+}
+.num1,
+.num2,
+.result {
+  font-size: 3rem;
+  width: 5rem;
+  height: 5rem;
+}
