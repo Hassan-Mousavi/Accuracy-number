@@ -48,6 +48,8 @@ body {
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
   margin-bottom: 2rem;
+  text-align: center;
+  font-size: 3.5rem;
 }
 .game_part {
   display: flex;
@@ -72,6 +74,12 @@ body {
   color: rgb(5, 130, 130);
   font-size: 6rem;
   font-weight: 700;
+}
+.hidden {
+  display: none;
+}
+.minus {
+  display: none;
 }
 
 .btns {

@@ -14,15 +14,32 @@ const secondCounter = document.querySelector(".time_question");
 const score = document.querySelector(".scores");
 ///////////////////////////////////////////////////////////////////////
 // scores part
-score.value = "0";
+score.value = 0;
 // number part
-const number1 = (num1.value = Math.trunc(Math.random() * 60));
-const number2 = (num2.value = Math.trunc(Math.random() * 60));
-// const totalResult = (result.value = Math.trunc(Math.random() * 45));
+function nextQuestion() {
+  num1.value = Math.trunc(Math.random() * 70);
+  num2.value = Math.trunc(Math.random() * 60);
+  console.log(Number(num1.value) + Number(num2.value));
+  console.log(Number(result.value));
+  if (Number(num1.value) + Number(num2.value) === Number(result.value)) {
+    score.value = 20;
+    console.log(score.value);
+  }
+}
+nextQuestion();
 
 nextBtn.addEventListener("click", function () {
-  plusIcon.classList.toggle("minus");
-  // minusBtn.classList.toggle("plus");
-  minusBtn.style.display = "block";
-  plusIcon.style.display = "none";
+  if (plusIcon.classList.toggle("hidden")) {
+    plusIcon.style.display = "none";
+    minusBtn.style.display = "block";
+  } else {
+    minusBtn.classList.toggle("hidden");
+    minusBtn.style.display = "none";
+    plusIcon.style.display = "block";
+  }
+  nextQuestion();
 });
+// timer
+secondCounter.textContent = setTimeout(function () {
+  const sec = new Date().getSeconds();
+}, 9000);
